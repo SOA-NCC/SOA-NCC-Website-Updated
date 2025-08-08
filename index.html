@@ -10,101 +10,45 @@
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 </head>
 <body>
-    <!-- Custom cursor elements -->
-    <div class="cursor"></div>
-    <div class="cursor-inner"></div>
-    <!-- Enhanced Navigation with Hamburger Menu -->
-    <nav id="navbar" class="navbar">
+    
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
         <div class="nav-container">
-            <!-- Enhanced Logo Section -->
-            <div class="nav-brand">
-                <div class="logo-container">
-                    <div class="logo-circle">
-                        <i class="fas fa-shield-alt"></i>
-                        <div class="logo-star">
-                            <i class="fas fa-star"></i>
-                        </div>
-                    </div>
-                    <div class="brand-text">
-                        <h1 class="brand-title">SOA NCC</h1>
-                        <p class="brand-subtitle">4(O) CTC</p>
-                    </div>
+            <!-- Left: Hamburger, NCC Logo, Brand -->
+            <div class="nav-left dropdown-parent">
+                <button class="hamburger" id="hamburger" aria-label="Menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <div class="logo">
+                    <img src="media/Logos/ncc logo.png" alt="SOA NCC Logo" />
+                </div>
+                <div class="brand-text">
+                    <span class="brand-title">SOA NCC</span>
+                    <span class="brand-subtitle">4 (O) CTC        |       1 (O) BN</span>
+                    <!-- <span class="brand-subtitle">1 (O) BN</span> -->
+
+                </div>
+                <!-- Dropdown Menu (move inside .dropdown-parent) -->
+                <div class="dropdown-menu" id="dropdown-menu">
+                    <a href="#home">Home</a>
+                    <a href="#about">About Us</a>
+                    <a href="#objectives">Objectives</a>
+                    <a href="#activities">Activities</a>
+                    <a href="#achievements">Achievements</a>
+                    <a href="#alumni">Alumni</a>
                 </div>
             </div>
-
-            <!-- Center Motto -->
-            <div class="nav-motto">
-                <span class="motto-text"></span>
+            <!-- Center: Motto -->
+            <div class="nav-center">
+                <span class="motto"></span>
             </div>
-
-            <!-- Hamburger Menu Button -->
-            <button class="hamburger-menu-btn" id="hamburgerMenuBtn">
-                <span class="hamburger-line"></span>
-                <span class="hamburger-line"></span>
-                <span class="hamburger-line"></span>
-            </button>
-        </div>
-
-        <!-- Full Screen Navigation Menu -->
-        <div class="fullscreen-menu" id="fullscreenMenu">
-            <div class="menu-overlay"></div>
-            <div class="menu-content">
-                <div class="menu-header">
-                    <div class="menu-logo">
-                        <div class="logo-circle">
-                            <i class="fas fa-shield-alt"></i>
-                        </div>
-                        <div class="brand-text">
-                            <h2>SOA NCC</h2>
-                            <p>4(O) CTC</p>
-                        </div>
-                    </div>
-                    <button class="menu-close-btn" id="menuCloseBtn">
-                        <i class="fas fa-times"></i>
-                    </button>
-                </div>
-                <div class="menu-links">
-                    <a href="#home" class="menu-link active" data-section="home">
-                        <i class="fas fa-home"></i>
-                        <span>Home</span>
-                    </a>
-                    <a href="#about" class="menu-link" data-section="about">
-                        <i class="fas fa-info-circle"></i>
-                        <span>About</span>
-                    </a>
-                    <a href="#objectives" class="menu-link" data-section="objectives">
-                        <i class="fas fa-bullseye"></i>
-                        <span>Objectives</span>
-                    </a>
-                    <a href="#activities" class="menu-link" data-section="activities">
-                        <i class="fas fa-running"></i>
-                        <span>Activities</span>
-                    </a>
-                    <a href="#achievements" class="menu-link" data-section="achievements">
-                        <i class="fas fa-trophy"></i>
-                        <span>Achievements</span>
-                    </a>
-                    <a href="#alumni" class="menu-link" data-section="alumni">
-                        <i class="fas fa-graduation-cap"></i>
-                        <span>Alumni</span>
-                    </a>
-                    <a href="#join" class="menu-link" data-section="join">
-                        <i class="fas fa-user-plus"></i>
-                        <span>Join</span>
-                    </a>
-                    <a href="#contact" class="menu-link" data-section="contact">
-                        <i class="fas fa-envelope"></i>
-                        <span>Contact</span>
-                    </a>
-                </div>
-                <div class="menu-footer">
-                    <p>"Unity and Discipline"</p>
-                    <div class="menu-social">
-                        <a href="#" class="menu-social-link"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#" class="menu-social-link"><i class="fab fa-youtube"></i></a>
-                        <a href="#" class="menu-social-link"><i class="fab fa-instagram"></i></a>
-                        <a href="#" class="menu-social-link"><i class="fab fa-twitter"></i></a>
-                    </div>
+            <!-- Right: Join Button & College Logo -->
+            <div class="nav-right">
+                <a href="#join" class="join-btn">Join</a>
+                <div class="college-logo">
+                    <img src="media/Logos/soa_logo_2.png" alt="College Logo" />
                 </div>
             </div>
         </div>
@@ -125,9 +69,10 @@
             </div>
 
             <h1 class="hero-title">SOA NCC</h1>
-            <h2 class="hero-subtitle">4(O) CTC</h2>
+            <h2 class="hero-subtitle">4(O) CTC | 1 (O) BN
+            </h2>
             <p class="hero-description">
-                Forging Leaders of Tomorrow Through Unity, Discipline, and Unwavering Service to the Nation
+                Unity and Discipline | Character. Leadership. Service.
             </p>
 
             <div class="hero-buttons">
@@ -145,9 +90,7 @@
         </div>
 
         <div class="scroll-indicator">
-            <div class="scroll-mouse">
-                <div class="scroll-wheel"></div>
-            </div>
+            <i class="fas fa-chevron-down"></i>
         </div>
     </section>
 
@@ -354,7 +297,7 @@
                         </div>
                     </div>
                     <h3>Col. Satyabrata Swain</h3>
-                    <p class="officer-rank ncc-red">Group Commander</p>
+                    <p class="officer-rank white-text">Group Commander</p>
                     <blockquote>
                         "True leadership lies not in commanding others, but in inspiring them to discover their own potential and serve the nation with unwavering dedication."
                     </blockquote>
@@ -362,13 +305,13 @@
 
                 <div class="message-card">
                     <div class="officer-image">
-                        <img src="/media/Leaders/co.png" alt="Lt. Col. Shantunu Dey" />
+                        <img src="media/Leaders/COsir.jpg" alt="Lt. Col. Shantunu Dey" />
                         <div class="officer-badge ncc-navy">
                             <i class="fas fa-star"></i>
                         </div>
                     </div>
                     <h3>Lt. Col. Shantunu Dey</h3>
-                    <p class="officer-rank ncc-navy">Officer Commanding</p>
+                    <p class="officer-rank white-text">Officer Commanding</p>
                     <blockquote>
                         "Discipline is the foundation upon which character is built. Through NCC, we forge not just soldiers, but citizens of exceptional integrity."
                     </blockquote>
@@ -412,7 +355,7 @@
                 <div class="cadet-card ncc-red">
                     <div class="cadet-image">
                         <img src="/media/Rank Holders/SUO Devi pic.png" alt="Devi Prasad Sarangi" />
-                        <div class="cadet-rank-badge">SUO</div>
+                        <div class="cadet-rank-badge ncc-navy-badge">SUO</div>
                     </div>
                     <h3>Devi Prasad Sarangi</h3>
                     <p class="cadet-rank">SUO</p>
@@ -423,10 +366,10 @@
                 <div class="cadet-card ncc-white-card">
                     <div class="cadet-image">
                         <img src="/media/Rank Holders/JUO Raj pic.png" alt="Raj Sahasranshu Biswal" />
-                        <div class="cadet-rank-badge ncc-navy-badge">JUO</div>
+                        <div class="cadet-rank-badge">JUO</div>
                     </div>
                     <h3>Raj Sahasranshu Biswal</h3>
-                    <p class="cadet-rank ncc-navy">JUO</p>
+                    <p class="cadet-rank">JUO</p>
                     <p class="cadet-year">Third Year</p>
                     <p class="cadet-intro">Committed to excellence in training and fostering exceptional team spirit among junior cadets through mentorship.</p>
                 </div>
@@ -434,12 +377,12 @@
                 <div class="cadet-card ncc-navy">
                     <div class="cadet-image">
                         <img src="/media/Rank Holders/JUO Nick pic.png" alt="Nikhilesh Sahoo" />
-                        <div class="cadet-rank-badge ncc-white-badge">JUO</div>
+                        <div class="cadet-rank-badge">JUO</div>
                     </div>
                     <h3>Nikhilesh Sahoo</h3>
-                    <p class="cadet-rank white">JUO</p>
-                    <p class="cadet-year white">Third Year</p>
-                    <p class="cadet-intro white">Passionate about comprehensive training and dedicated to mentoring new cadets in core NCC values and traditions.</p>
+                    <p class="cadet-rank">JUO</p>
+                    <p class="cadet-year">Third Year</p>
+                    <p class="cadet-intro">Passionate about comprehensive training and dedicated to mentoring new cadets in core NCC values and traditions.</p>
                 </div>
 
                 <div class="cadet-card ncc-skyblue">
@@ -448,8 +391,8 @@
                         <div class="cadet-rank-badge">JUO</div>
                     </div>
                     <h3>Anubhav Samantray</h3>
-                    <p class="cadet-rank ncc-red">JUO</p>
-                    <p class="cadet-year">Second Year</p>
+                    <p class="cadet-rank">JUO</p>
+                    <p class="cadet-year">Third Year</p>
                     <p class="cadet-intro">Dedicated to community service excellence and upholding the highest standards of discipline and leadership.</p>
                 </div>
             </div>
@@ -474,31 +417,31 @@
             <div class="achievements-carousel">
                 <div class="carousel-container">
                     <div class="carousel-slide active">
-                        <img src="/placeholder.svg?height=500&width=800" alt="RDC Winner 2023" />
+                        <img src="media/Achievement/TSC2025.png" alt="TSC 2025" />
                         <div class="slide-content">
-                            <h3>RDC Winner 2023</h3>
-                            <p>Republic Day Camp representation with outstanding performance at Rajpath, New Delhi</p>
+                            <h3>TSC 2025</h3>
+                            <p>4 Cadets of SOA NCC got selected in IUC and are representing Cuttack group in IGC</p>
                         </div>
                     </div>
                     <div class="carousel-slide">
-                        <img src="/placeholder.svg?height=500&width=800" alt="TSC Excellence" />
+                        <img src="media/Achievement/YEP.png" alt="TSC Excellence" />
                         <div class="slide-content">
-                            <h3>TSC Excellence</h3>
-                            <p>Thal Sainik Camp participation with distinction in leadership and adventure activities</p>
+                            <h3>YEP 2024</h3>
+                            <p>JUO Abinash Nanda represented India at the Youth Exchange Program (YEP) in Kyrgyzstan.</p>
                         </div>
                     </div>
                     <div class="carousel-slide">
-                        <img src="/placeholder.svg?height=500&width=800" alt="EBSB Program" />
+                        <img src="media/Achievement/TSC2024.png" alt="EBSB Program" />
                         <div class="slide-content">
-                            <h3>EBSB Program</h3>
-                            <p>Ek Bharat Shreshtha Bharat cultural exchange program promoting national integration</p>
+                            <h3>TSC 2024</h3>
+                            <p>Thal Sainik Camp representation with outstanding performance at Rajpath, New Delhi</p>
                         </div>
                     </div>
                     <div class="carousel-slide">
-                        <img src="/placeholder.svg?height=500&width=800" alt="Best Unit Award" />
+                        <img src="media/Achievement/CapitalFoundationDay.png" alt="Best Unit Award" />
                         <div class="slide-content">
-                            <h3>Best Unit Award</h3>
-                            <p>Recognized as the best performing NCC unit in Eastern Command for exceptional training standards</p>
+                            <h3>2nd Best Troop</h3>
+                            <p> 06 Cadets of SOA NCC participated in the 77th Capital Foundation Day Celebrations and were awarded the 2nd Prize for their remarkable performance. </p>
                         </div>
                     </div>
                 </div>
@@ -540,7 +483,7 @@
             <div class="alumni-grid">
                 <div class="alumni-card ncc-navy">
                     <div class="alumni-image">
-                        <img src="/placeholder.svg?height=300&width=300" alt="Sushant Dhar" />
+                        <img src="media/Alumni/Susant_dhar.png" alt="Sushant Dhar" />
                         <div class="alumni-badge">Alumni</div>
                     </div>
                     <h3>Sushant Dhar</h3>
@@ -551,7 +494,7 @@
 
                 <div class="alumni-card ncc-red">
                     <div class="alumni-image">
-                        <img src="/placeholder.svg?height=300&width=300" alt="Kumar Abinash" />
+                        <img src="media/Alumni/Kumar_Abinash.png" alt="Kumar Abinash" />
                         <div class="alumni-badge">Alumni</div>
                     </div>
                     <h3>Kumar Abinash</h3>
@@ -562,18 +505,18 @@
 
                 <div class="alumni-card ncc-white-card">
                     <div class="alumni-image">
-                        <img src="/placeholder.svg?height=300&width=300" alt="Ankit Raj Biswal" />
+                        <img src="media/Alumni/Ankit_Biswal.png" alt="Ankit Raj Biswal" />
                         <div class="alumni-badge ncc-navy-badge">Alumni</div>
                     </div>
                     <h3>Ankit Raj Biswal</h3>
-                    <p class="alumni-position ncc-navy">Lieutenant</p>
+                    <p class="alumni-position">Lieutenant</p>
                     <p class="alumni-achievement">Indian Army</p>
                     <p class="alumni-description">Commissioned as Lieutenant in the Indian Army, leading with honor after completing training at OTA Chennai.</p>
                 </div>
 
                 <div class="alumni-card ncc-skyblue">
                     <div class="alumni-image">
-                        <img src="/placeholder.svg?height=300&width=300" alt="Ranbir Singh" />
+                        <img src="media/Alumni/Ranbir_Singh.png" alt="Ranbir Singh" />
                         <div class="alumni-badge">Alumni</div>
                     </div>
                     <h3>Ranbir Singh</h3>
@@ -947,6 +890,77 @@
         </div>
     </footer>
 
+    <!-- Custom cursor elements -->
+    <div class="cursor"></div>
+    <div class="cursor-follower"></div>
+
     <script src="script.js"></script>
+    <!-- Custom cursor script -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const cursor = document.querySelector('.cursor');
+            const follower = document.querySelector('.cursor-follower');
+            const hoverElements = document.querySelectorAll('a, button, [data-cursor-hover]');
+            
+            let posX = 0, posY = 0;
+            let mouseX = 0, mouseY = 0;
+            let followerX = 0, followerY = 0;
+            
+            // Smoothing factor for follower (lower = smoother)
+            const smoothing = 0.2;
+            
+            // Update cursor position
+            document.addEventListener('mousemove', function(e) {
+                mouseX = e.clientX;
+                mouseY = e.clientY;
+                
+                // Immediate cursor
+                cursor.style.left = mouseX + 'px';
+                cursor.style.top = mouseY + 'px';
+            });
+            
+            // Animation loop for follower
+            function animate() {
+                // Calculate distance between cursor and follower
+                const distX = mouseX - followerX;
+                const distY = mouseY - followerY;
+                
+                // Move follower with easing
+                followerX += distX * smoothing;
+                followerY += distY * smoothing;
+                
+                // Apply new position
+                follower.style.left = followerX + 'px';
+                follower.style.top = followerY + 'px';
+                
+                requestAnimationFrame(animate);
+            }
+            
+            // Start animation
+            animate();
+            
+            // Hover effects
+            hoverElements.forEach(el => {
+                el.addEventListener('mouseenter', () => {
+                    cursor.classList.add('hover');
+                    follower.classList.add('hover');
+                });
+                
+                el.addEventListener('mouseleave', () => {
+                    cursor.classList.remove('hover');
+                    follower.classList.remove('hover');
+                });
+            });
+            
+            // Click effect
+            document.addEventListener('mousedown', () => {
+                cursor.style.transform = 'translate(-50%, -50%) scale(0.8)';
+            });
+            
+            document.addEventListener('mouseup', () => {
+                cursor.style.transform = 'translate(-50%, -50%) scale(1)';
+            });
+        });
+    </script>
 </body>
 </html>
